@@ -38,29 +38,29 @@ public class DataLoader {
                 return roleRepo.save(r);
             });
 
-            // 2. Crear Usuario USER (Contraseña: user2026)
+            // 2. Crear Usuario USER (Contraseña: user1234)
             if (userRepo.findByUsername("user").isEmpty()) {
                 User user = new User();
                 user.setUsername("user");
-                user.setPassword(encoder.encode("user2026"));
+                user.setPassword(encoder.encode("user1234"));
                 user.setRoles(Set.of(roleUser));
                 userRepo.save(user);
             }
 
-            // 3. Crear Usuario ADMIN (Contraseña: admin2026)
+            // 3. Crear Usuario ADMIN (Contraseña: admin1234)
             if (userRepo.findByUsername("admin").isEmpty()) {
                 User admin = new User();
                 admin.setUsername("admin");
-                admin.setPassword(encoder.encode("admin2026"));
+                admin.setPassword(encoder.encode("admin1234"));
                 admin.setRoles(Set.of(roleAdmin));
                 userRepo.save(admin);
             }
 
-            // 4. Crear Usuario MANAGER (Contraseña: manager2026)
+            // 4. Crear Usuario MANAGER (Contraseña: manager1234)
             if (userRepo.findByUsername("manager").isEmpty()) {
                 User manager = new User();
                 manager.setUsername("manager");
-                manager.setPassword(encoder.encode("manager2026"));
+                manager.setPassword(encoder.encode("manager1234"));
                 manager.setRoles(Set.of(roleManager));
                 userRepo.save(manager);
             }
