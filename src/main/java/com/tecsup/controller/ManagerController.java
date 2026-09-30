@@ -10,6 +10,6 @@ public class ManagerController {
 
     @GetMapping("/reportes")
     public String reportes() {
-        return "Bienvenido MANAGER - Módulo de Reportes";
+        return "Bienvenido MANAGER - Reportes del sistema";
     }
 }
